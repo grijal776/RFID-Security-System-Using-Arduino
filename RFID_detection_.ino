@@ -7,8 +7,8 @@ LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 Servo myservo;
 
 // Define the RFID tag IDs (replace with your own)
-#define TAG_ID_1 0x7C5E7322
-#define TAG_ID_2 0xF98D71B2
+#define TAG_ID_1 0x0000000
+#define TAG_ID_2 0x0000000
 
 #define SS_PIN 10
 #define RST_PIN 9
@@ -56,7 +56,7 @@ void loop() {
         lcd.clear();
         lcd.print("Access Granted");
         lcd.setCursor(0, 1);
-        lcd.print("Welcome AMBU");
+        lcd.print("Welcome");
         for (pos = 0; pos <= 180; pos += 1) {
           myservo.write(pos);
           delay(5);
